@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-12T03:55:56.928Z",
+    "end": "2023-01-12T03:57:28.009Z",
+    "duration": 91081,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f19339cb-0b52-4365-8245-4fa085e6314c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\annex53\\applyRecognition.cy.js",
+      "file": "cypress\\e2e\\annex53\\applyRecognition.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c18675d7-28ba-45b7-b8a3-0946b76ad90d",
+          "title": "Apply Testing Laboratory Recognition",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login as Testing Laboratory",
+              "fullTitle": "Apply Testing Laboratory Recognition Login as Testing Laboratory",
+              "timedOut": null,
+              "duration": 18945,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/TLDashboard');\ncy.get('.name').should('contain', NAME);",
+              "err": {},
+              "uuid": "c47e83fa-5891-46d4-88fd-323959b3913c",
+              "parentUUID": "c18675d7-28ba-45b7-b8a3-0946b76ad90d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fillup and Submit Application",
+              "fullTitle": "Apply Testing Laboratory Recognition Fillup and Submit Application",
+              "timedOut": null,
+              "duration": 72065,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.list > :nth-child(3) > :nth-child(1)').click();\ncy.get(':nth-child(4) > .waves-effect').click();\n// TESTING LABORATORY DETAILS FORM\ncy.wait(1000);\ncy.get('#testLabName').type(`${payload.company}`);\ncy.get('[for=\"local_address\"]').click();\ncy.get('.sub-content > :nth-child(5) > :nth-child(1) > :nth-child(1) > .form-group > .form-line > .btn-group > .btn > .filter-option').click();\ncy.get(':nth-child(5) > :nth-child(1) > :nth-child(1) > .form-group > .form-line > .btn-group > .open > .dropdown-menu > [data-original-index=\"1\"] > a').click();\ncy.get(':nth-child(5) > :nth-child(2) > :nth-child(1) > .form-group > .form-line > .btn-group > .btn > .filter-option').click();\ncy.get(':nth-child(2) > :nth-child(1) > .form-group > .form-line > .btn-group > .open > .dropdown-menu > [data-original-index=\"1\"] > a').click();\ncy.get(':nth-child(6) > :nth-child(1) > :nth-child(1) > .form-group > .form-line > .btn-group > .btn').click();\ncy.get(':nth-child(6) > :nth-child(1) > :nth-child(1) > .form-group > .form-line > .btn-group > .open > .dropdown-menu > [data-original-index=\"1\"] > a').click();\ncy.get('#brgyName').type(payload.brgy);\ncy.get('#districtName').type(payload.district);\ncy.get('#street').type(payload.street);\ncy.get('#totalNumPersonel').type('{selectall}{backspace}').type(payload.total_personel);\ncy.get(':nth-child(11) > .table > tbody > tr > :nth-child(1) > .form-group > .form-line > .form-control').type(payload.contact[0].phone);\ncy.get(':nth-child(11) > .table > tbody > tr > :nth-child(2) > .form-group > .form-line > .form-control').type(payload.contact[0].mobile);\ncy.get('#email').type(payload.email);\ncy.get('#website').type(payload.website);\ncy.get('#testLabManLname').type(payload.manager_lname);\ncy.get('#testLabManFname').type(payload.manager_fname);\ncy.get('#testLabManMname').type(payload.manager_mname);\ncy.get('#testLabManSuffix').type(payload.manager_suffix);\ncy.get('#contactPerLname').type(payload.contact_person_lname);\ncy.get('#contactPerFname').type(payload.contact_person_fname);\ncy.get('#contactPerMname').type(payload.contact_person_mname);\ncy.get('#contactPerSuffix').type(payload.contact_person_suffix);\ncy.get('#contactPerDetailsTelNo').type(payload.contact_person_telno);\ncy.get('#contactPerDetailsMobileNo').type(payload.contact_person_mobile);\ncy.get('#contactPerDetailsEmail').type(payload.contact_person_email);\ncy.get('#localRepCompany').type(payload.local_rep_company);\ncy.get(':nth-child(4) > :nth-child(1) > :nth-child(1) > .form-group > .form-line > .btn-group > .btn > .filter-option').click();\ncy.get(':nth-child(4) > :nth-child(1) > :nth-child(1) > .form-group > .form-line > .btn-group > .open > .dropdown-menu > [data-original-index=\"1\"] > a').click();\ncy.get(':nth-child(4) > :nth-child(2) > :nth-child(1) > .form-group > .form-line > .btn-group > .btn > .filter-option').click();\ncy.get(':nth-child(4) > :nth-child(2) > :nth-child(1) > .form-group > .form-line > .btn-group > .open > .dropdown-menu > [data-original-index=\"1\"] > a').click();\ncy.get(':nth-child(21) > :nth-child(5) > :nth-child(1) > :nth-child(1) > .form-group > .form-line > .btn-group > .btn > .filter-option').click();\ncy.get(':nth-child(21) > :nth-child(5) > :nth-child(1) > :nth-child(1) > .form-group > .form-line > .btn-group > .open > .dropdown-menu > [data-original-index=\"1\"] > a').click();\ncy.get('#localRepbrgyName').type(payload.local_rep_brgy);\ncy.get('#localRepStreet').type(payload.local_rep_street);\ncy.get(':nth-child(21) > .table-responsive > .table > tbody > tr > :nth-child(1) > .form-group > .form-line > .form-control').type(payload.local_rep_contact[0].phone);\ncy.get(':nth-child(21) > .table-responsive > .table > tbody > tr > :nth-child(2) > .form-group > .form-line > .form-control').type(payload.local_rep_contact[0].mobile);\ncy.get('#localRepemail').type(payload.local_rep_email);\ncy.get('#localRepwebsite').type(payload.local_rep_website);\ncy.get('#authRepLname').type(payload.auth_rep_lname);\ncy.get('#authRepFname').type(payload.auth_rep_fname);\ncy.get('#authRepMname').type(payload.auth_rep_mname);\ncy.get('#authRepSuffix').type(payload.auth_rep_suffix);\ncy.get('#authRepTelNo').type(payload.auth_rep_telno);\ncy.get('#authRepMobileNo').type(payload.auth_rep_mobile);\ncy.get('#authRepEmail').type(payload.auth_rep_email);\ncy.get('.buttons > .btn').click();\n// GENERAL INFORMATION FORM\ncy.wait(1000);\ncy.get('#accreditation_name').type(payload.accreditions[0].name);\ncy.get('#accreditation_no').type(payload.accreditions[0].no);\ncy.get('#accreditation_validity').type(payload.accreditions[0].validity);\ncy.get(':nth-child(4) > div > .btn').click();\ncy.get('#fileInputAccreditation').selectFile('cypress/e2e/files/fiel-1.pdf', {\n  force: true\n});\ncy.get('#certificate_name').type(payload.accreditions[0].name);\ncy.get('tr > :nth-child(2) > div > .btn').click();\ncy.get('#fileInputCert').selectFile('cypress/e2e/files/fiel-2.pdf', {\n  force: true\n});\ncy.get(':nth-child(2) > :nth-child(1) > .form-group > .form-line > #pns_no').type(payload.scopes[0].pnsno);\ncy.get(':nth-child(2) > :nth-child(2) > .form-group > .form-line > #standard_title').type(payload.scopes[0].title);\ncy.get('.p-l-20').click();\n// DOCUMENTS FORM\ncy.wait(1000);\ncy.get(':nth-child(1) > :nth-child(1) > .btn-primary').click();\ncy.get('#fileDocument').selectFile('cypress/e2e/files/fiel-1.pdf', {\n  force: true\n});\ncy.get(':nth-child(2) > :nth-child(1) > .btn-primary').click();\ncy.get('#fileDocument').selectFile('cypress/e2e/files/fiel-2.pdf', {\n  force: true\n});\ncy.get(':nth-child(3) > :nth-child(1) > .btn-primary').click();\ncy.get('#fileDocument').selectFile('cypress/e2e/files/fiel-3.pdf', {\n  force: true\n});\ncy.get(':nth-child(4) > :nth-child(1) > .btn-primary').click();\ncy.get('#fileDocument').selectFile('cypress/e2e/files/fiel-4.pdf', {\n  force: true\n});\ncy.get(':nth-child(5) > :nth-child(1) > .btn-primary').click();\ncy.get('#fileDocument').selectFile('cypress/e2e/files/fiel-5.pdf', {\n  force: true\n});\ncy.get('.p-l-20').click();\n// TERMS & CONDITIONS FORM\ncy.wait(1000);\ncy.get('label.font-bold').click();\ncy.get('.btn-primary').click();\ncy.get('.jconfirm-buttons > .btn-primary').click();\ncy.get('.jconfirm-content > div').should('contain', MESSAGE);",
+              "err": {},
+              "uuid": "8988a7ed-a6c8-4f29-811e-57aa3b13d456",
+              "parentUUID": "c18675d7-28ba-45b7-b8a3-0946b76ad90d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c47e83fa-5891-46d4-88fd-323959b3913c",
+            "8988a7ed-a6c8-4f29-811e-57aa3b13d456"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 91010,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
